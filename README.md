@@ -1,1 +1,1 @@
-#Tugas Kecil 1 Strategi Algoritma
+# Tugas Kecil 1 Strategi Algoritma #
