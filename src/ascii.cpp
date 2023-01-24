@@ -1,4 +1,8 @@
+#ifndef ASCII_CPP
+#define ASCII_CPP
+
 #include <iostream>
+#include "solve24.cpp"
 
 using namespace std;
 
@@ -27,18 +31,19 @@ void analyzingsolution() {
 
 }
                
-void solutionfounded(int x) {
+void solutionfounded(int x, double time) {
     cout << " __| |__________________________________________________________________________________________________________________________| |__ " << endl;
     cout << "(__   __________________________________________________________________________________________________________________________   __)" << endl;
     cout << "   | |                                                                                                                          | |   " << endl;
     cout << "   | |                                                                                                                          | |   " << endl;
     cout << "   | |                                                                                                                          | |   " << endl;
     cout << "                                                   Solution discovered : " << x << endl;
+    cout << "                                                   Discovery Time      : " << time << " s" << endl;
     cout << "   | |                                                                                                                          | |   " << endl;
     cout << "   | |                                                                                                                          | |   " << endl;
     cout << " __| |__________________________________________________________________________________________________________________________| |__ " << endl;
     cout << "(__   __________________________________________________________________________________________________________________________   __)" << endl;
-    cout << "   | |                                                                                                                         | |   " << endl;
+    cout << "   | |                                                                                                                         | |   " << endl << endl << endl << endl;
 } 
 
 void thankyou() {
@@ -55,9 +60,35 @@ void thankyou() {
     cout << "                                                       d8'                                 " << endl;
 }
 
-int main() {
-    analyzingsolution();
-    solutionfounded(0);
-    solutionfounded(7843);
-    thankyou();
+void choosen_cards(int choosen[4]) {
+    cout << endl << endl << endl;
+    cout <<" ▄████▄   ██░ ██  ▒█████   ▒█████    ██████ ▓█████  ███▄    █     ▄████▄   ▄▄▄       ██▀███  ▓█████▄   ██████ " << endl;
+    cout <<" ▒██▀ ▀█  ▓██░ ██▒▒██▒  ██▒▒██▒  ██▒▒██    ▒ ▓█   ▀  ██ ▀█   █    ▒██▀ ▀█  ▒████▄    ▓██ ▒ ██▒▒██▀ ██▌▒██    ▒ " << endl;
+    cout <<"▒▓█    ▄ ▒██▀▀██░▒██░  ██▒▒██░  ██▒░ ▓██▄   ▒███   ▓██  ▀█ ██▒   ▒▓█    ▄ ▒██  ▀█▄  ▓██ ░▄█ ▒░██   █▌░ ▓██▄   " << endl;
+    cout <<"▒▓▓▄ ▄██▒░▓█ ░██ ▒██   ██░▒██   ██░  ▒   ██▒▒▓█  ▄ ▓██▒  ▐▌██▒   ▒▓▓▄ ▄██▒░██▄▄▄▄██ ▒██▀▀█▄  ░▓█▄   ▌  ▒   ██▒" << endl;
+    cout <<"▒ ▓███▀ ░░▓█▒░██▓░ ████▓▒░░ ████▓▒░▒██████▒▒░▒████▒▒██░   ▓██░   ▒ ▓███▀ ░ ▓█   ▓██▒░██▓ ▒██▒░▒████▓ ▒██████▒▒" << endl;
+    cout <<"░ ░▒ ▒  ░ ▒ ░░▒░▒░ ▒░▒░▒░ ░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒░   ▒ ▒    ░ ░▒ ▒  ░ ▒▒   ▓▒█░░ ▒▓ ░▒▓░ ▒▒▓  ▒ ▒ ▒▓▒ ▒ ░" << endl;
+    cout <<"  ░  ▒    ▒ ░▒░ ░  ░ ▒ ▒░   ░ ▒ ▒░ ░ ░▒  ░ ░ ░ ░  ░░ ░░   ░ ▒░     ░  ▒     ▒   ▒▒ ░  ░▒ ░ ▒░ ░ ▒  ▒ ░ ░▒  ░ ░" << endl;
+    cout <<" ░         ░  ░░ ░░ ░ ░ ▒  ░ ░ ░ ▒  ░  ░  ░     ░      ░   ░ ░    ░          ░   ▒     ░░   ░  ░ ░  ░ ░  ░  ░  " << endl;
+    cout <<"░ ░       ░  ░  ░    ░ ░      ░ ░        ░     ░  ░         ░    ░ ░            ░  ░   ░        ░          ░  " << endl;
+    cout <<"░                                                                ░                            ░               " << endl;
+    cout << "\n\n\n";
+
+    cout << "                               .------..------..------..------." << endl;
+    cout << "                               |"<<int2card(choosen[0])<<".--. ||"<<int2card(choosen[1])<<".--. ||"<<int2card(choosen[2])<<".--. ||"<<int2card(choosen[3])<<".--. |" << endl;
+    cout << "                               | :/\\: || :/\\: || :/\\: || :/\\: |" << endl;
+    cout << "                               | :\\/: || :\\/: || :\\/: || :\\/: |" << endl;
+    cout << "                               | '--'"<<int2card(choosen[0])<<"|| '--'"<<int2card(choosen[1])<<"|| '--'"<<int2card(choosen[2])<<"|| '--'"<<int2card(choosen[3])<<"|" << endl;
+    cout << "                               `------'`------'`------'`------'" << endl;
+    cout << "\n\n\n";
 }
+
+// Test and debugging
+/*int main() {
+    analyzingsolution();
+    solutionfounded(0, 6.866);
+    solutionfounded(7843, 453.54);
+    thankyou();
+}*/
+
+#endif
