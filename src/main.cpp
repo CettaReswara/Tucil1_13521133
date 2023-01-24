@@ -51,6 +51,9 @@ int main() {
         // Start solving
         string resulting24 = "";
         int solution_discovered = solver24(choosen_card, &resulting24);
+        if (solution_discovered == 0) {
+            cout << "Tidak ada solusi memenuhi\n";
+        }
 
         // Stop counting time, save time
         long stop_tick = clock();
@@ -60,6 +63,16 @@ int main() {
         solutionfounded(solution_discovered, ellapsed_time);
 
         // Asking for generating file output
+        char saving;
+        cout << "Apakah ingin menyimpan solusi sebagai file txt? (Y/N) ";
+        cin >> saving;
+
+        if (saving == 'Y') {
+            string nama_file;
+            cout << "Masukkan nama file: ";
+            cin >> nama_file;
+            fileoutput(solution_discovered, resulting24, nama_file);
+        }
 
         // Asking for more solution
         char loop_again;

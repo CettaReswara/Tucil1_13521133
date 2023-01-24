@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <time.h>
+#include <fstream>
+#include <string>
 #include "solve24.cpp"
 
 using namespace std;
@@ -28,8 +30,18 @@ int userinput(int k) {
     return i;
 }
 
-void fileoutput(string result) {
-
+void fileoutput(int count, string result, string file_name) {
+    string fileName = file_name+".txt";
+    ofstream fw;
+    fw.open("test/"+fileName);
+    if (fw.is_open()) {
+        fw << "Terdapat " << count << " kombinasi yang menghasilkan 24.\n";
+        fw << result;
+        fw.close();
+        cout << "File berhasil di simpan! \n\n";
+    } else {
+        cout << "Terdapat kesalahan membuka file.\n\n";
+    }
 }
 
 /*int main() {
