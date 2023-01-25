@@ -2,7 +2,6 @@
 #define SOLVE24_CPP
 
 #include <iostream>
-#include <random>
 using namespace std;
 
 // Fungsi untuk mengubah input dari char menjadi integer
